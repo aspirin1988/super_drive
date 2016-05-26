@@ -14,7 +14,7 @@
 <body>
 <nav class="uk-navbar" data-uk-sticky>
 	<div class="uk-container uk-container-center">
-		<a href="#" class="uk-navbar-brand">СУПЕР <br class="uk-hidden-small">ДРАЙВ</a>
+		<a href="#" class="uk-navbar-brand"><?=get_field('logo')?></a>
 		<div class="uk-navbar-flip">
 			<ul class="uk-navbar-nav uk-hidden-small uk-navbar-attached">
 				<li class="btn_main-section"><a href="#main-section" data-uk-smooth-scroll>Главная</a></li>

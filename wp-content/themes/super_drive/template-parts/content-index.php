@@ -6,7 +6,7 @@
 		</p>
 		<div class="outer-border uk-visible-large"></div>
 	</div>
-	<button type="button" data-uk-modal="{target:'#modalPurchase', center:true}"><?=get_field('order_button')?></button>
+	<button type="button" data-uk-modal="{target:'#modalPurchase', center:true}"><?=get_field('order_button',4)?></button>
 </div>
 <!--КОНЕЦ main section-->
 
@@ -62,12 +62,9 @@
 		<div class="text-section-wrapper">
 			<div class="text-section" data-uk-parallax="{opacity: '0,1', viewport: '0.5'}">
 				<p>
-					<span>7</span> <br>
-					Каждая
-					седьмая поездка <br>
-					БЕСПЛАТНО
+				<?=get_field('promotions_text',4)?>
 				</p>
-				<img src="img/promotions_car.png">
+				<img src="<?=get_field('promotions_image',4)?>">
 			</div>
 		</div>
 	</div>

@@ -1,10 +1,10 @@
 <footer id="footer">
 	<div class="uk-container uk-container-center">
-		<h3>СУПЕР ДРАЙВ</h3>
+		<h3><?=get_field('logo')?></h3>
 		<p class="phone-numbers">
 			<span>Жанибек</span> <br>
-			<a href="#">+7 747 322 04 89</a> <br class="uk-visible-very-small"> <a href="#">+7 705 170 37 09</a> <br>
-			<a href="#">+7 775 885 32 51</a> <br class="uk-visible-very-small"> <a href="#">+7 747 886 20 85</a>
+			<a href="tel:<?=get_field('phone1',4)?>"><?=get_field('phone1',4)?></a> <br class="uk-visible-very-small"> <a href="tel:<?=get_field('phone2',4)?>"><?=get_field('phone1',4)?></a> <br>
+			<a href="tel:<?=get_field('phone3',4)?>"><?=get_field('phone3',4)?></a> <br class="uk-visible-very-small"> <a href="tel:<?=get_field('phone4',4)?>"><?=get_field('phone4',4)?></a>
 		</p>
 	</div>
 </footer>
@@ -14,7 +14,7 @@
 	<div class="uk-modal-dialog">
 		<a class="uk-modal-close uk-close"></a>
 		<h2>Закажите услуги сейчас</h2>
-		<form action="" name="purchaseService">
+		<form action="" class="blink-mailer" name="purchaseService">
 			<label for="name">Имя</label>
 			<input type="text" id="name">
 			<label for="phoneNumber">Телефон</label>
@@ -36,5 +36,10 @@
 <script src="<?php bloginfo('template_directory')?>/public/js/components/slider.min.js"></script>
 <script src="<?php bloginfo('template_directory')?>/public/js/components/parallax.min.js"></script>
 <script src="<?php bloginfo('template_directory')?>/public/js/scripts.js"></script>
+<script src="https://callback.blink.kz/resources/callback/js/mailer.js"></script>
+<script>
+	var submitSMG = new BMModule();
+	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); }, function(error) {});
+</script>
 </body>
 </html>

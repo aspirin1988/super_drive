@@ -3,7 +3,7 @@
 		<h3><?=get_field('logo')?></h3>
 		<p class="phone-numbers">
 			<span>Жанибек</span> <br>
-			<a href="tel:<?=get_field('phone1',4)?>"><?=get_field('phone1',4)?></a> <br class="uk-visible-very-small"> <a href="tel:<?=get_field('phone2',4)?>"><?=get_field('phone1',4)?></a> <br>
+			<a href="tel:<?=get_field('phone1',4)?>"><?=get_field('phone1',4)?></a> <br class="uk-visible-very-small"> <a href="tel:<?=get_field('phone2',4)?>"><?=get_field('phone2',4)?></a> <br>
 			<a href="tel:<?=get_field('phone3',4)?>"><?=get_field('phone3',4)?></a> <br class="uk-visible-very-small"> <a href="tel:<?=get_field('phone4',4)?>"><?=get_field('phone4',4)?></a>
 		</p>
 	</div>

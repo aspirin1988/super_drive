@@ -82,90 +82,23 @@
 
 				<div class="uk-slider-container">
 					<ul class="uk-slider uk-grid uk-grid-width-medium-1-2 uk-grid-width-large-1-3">
+						<?php $posts=get_posts(array('category_name'=>'reviews'));
+						foreach ($posts as $value):
+						?>
 						<li>
 							<div class="review-item">
-								<img src="img/avatar-example.jpg">
+								<img src="<?=get_the_post_thumbnail_url($value->ID)?>">
 								<div class="name">
 									<figure></figure>
-									<p>Жанар Манпар</p>
+									<p><?=$value->post_title?></p>
 									<figure></figure>
 								</div>
 								<p>
-									Consectetur adipisicing elit. Aliquid beatae dignissimos dolores id illum impedit,
-									iste nesciunt nobis officiis, totam unde velit vero, voluptates? Amet assumenda
-									ipsa minima molestiae necessitatibus
-									odit officiis possimus quas quasi sed ut vero voluptate voluptates? Comodi placeat porro praesentium quia quibusdam sint ullam ut!
+									<?=$value->post_content?>
 								</p>
 							</div>
 						</li>
-						<li>
-							<div class="review-item">
-								<img src="img/avatar-example.jpg">
-								<div class="name">
-									<figure></figure>
-									<p>Мужик Мужиков</p>
-									<figure></figure>
-								</div>
-								<p>
-									Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-									mollit anim id est laborum.
-								</p>
-							</div>
-						</li>
-						<li>
-							<div class="review-item">
-								<img src="img/avatar-example.jpg">
-								<div class="name">
-									<figure></figure>
-									<p>Джон Смит</p>
-									<figure></figure>
-								</div>
-								<p>
-									Voluptatem adipisicing elit. Accusamus asperiores culpa cum dicta dolores dolorum ea
-									esse eveniet ex explicabo facere fugit ipsa itaque iure magnam, modi nemo neque
-									nesciunt non, nulla numquam obcaecati odio officia provident quibusdam quis ratione
-									recusandae. Debitis dolorem, doloremque ducimus, expedita fugit
-									illo libero minus natus praesentium quidem quod recusandae unde velit!
-								</p>
-							</div>
-						</li>
-						<li>
-							<div class="review-item">
-								<img src="img/avatar-example.jpg">
-								<div class="name">
-									<figure></figure>
-									<p>Поц с Района</p>
-									<figure></figure>
-								</div>
-								<p>
-									Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-									mollit anim id est laborum. Cumque debitis deserunt dolorum expedita fuga
-									hic iste labore laborum, libero neque nostrum quaerat quos sint vel.
-								</p>
-							</div>
-						</li>
-						<li>
-							<div class="review-item">
-								<img src="img/avatar-example.jpg">
-								<div class="name">
-									<figure></figure>
-									<p>Женщина Мужикова</p>
-									<figure></figure>
-								</div>
-								<p>
-									Expedita facilis illum minus, necessitatibus perferendis praesentium rem, suscipit
-									voluptatum. Iure necessitatibus nostrum officiis? Doloribus eius excepturi facilis
-									in minus nobis nostrum odit provident, rem reprehenderit sit temporibus voluptate
-									voluptatibus! Commodi est facilis fugit in laudantium libero molestiae qui, ut?
-									Aliquid
-									Necessitatibus tempora voluptatibus.
-								</p>
-							</div>
-						</li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 				<a href="" class="uk-slidenav uk-slidenav-previous"

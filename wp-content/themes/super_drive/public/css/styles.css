@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/* НАЧАЛО ОБЩИЕ СТИЛИ */
+/* НАЧАЛО подключаем шрифт 'Bebas Neue': */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebas_neue/BebasNeue Regular.otf") format("truetype");
+  font-weight: normal; }
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebas_neue/BebasNeue Bold.otf") format("truetype");
+  font-weight: bold; }
+/* КОНЕЦ подключаем шрифт 'Bebas Neue' */
+/* НАЧАЛО подключаем шрифт 'Champagne&Limousines': */
+@font-face {
+  font-family: 'Champagne$Limousines';
+  src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines.otf") format("truetype");
+  font-weight: normal; }
+@font-face {
+  font-family: 'Champagne$Limousines';
+  src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines_Bold.otf") format("truetype");
+  font-weight: bold; }
+/* КОНЕЦ подключаем шрифт 'Champagne&Limousines'*/
+body {
+  color: black; }
+
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit;
+    text-decoration: none; }
+
+li.uk-active-li > a {
+  color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+li.uk-active > a {
+  color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+button,
+input[type=submit] {
+  font-size: 24px;
+  font-family: "Champagne$Limousines", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: white;
+  border: none;
+  margin-top: 15px;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 50;
+  cursor: pointer; }
+  @media (max-width: 767px) {
+    button,
+    input[type=submit] {
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-bottom: 15px; } }
+  button:hover,
+  input[type=submit]:hover {
+    color: white;
+    background: rgba(0, 0, 0, 0.8); }
+
+.uk-visible-very-small {
+  display: none; }
+  @media (max-width: 480px) {
+    .uk-visible-very-small {
+      display: inherit; } }
+
+/* КОНЕЦ ОБЩИЕ СТИЛИ */
+/* НАЧАЛО modal */
+.uk-modal {
+  text-align: center; }
+  .uk-modal .uk-modal-dialog {
+    font-family: "Champagne$Limousines", Arial, sans-serif;
+    font-weight: bold;
+    max-width: 450px; }
+  .uk-modal form {
+    padding: 0 20px 0; }
+  .uk-modal h2 {
+    font-family: "Champagne$Limousines", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: black; }
+    @media (max-width: 767px) {
+      .uk-modal h2 {
+        font-size: 18px; } }
+  .uk-modal label {
+    font-size: 24px;
+    text-align: left;
+    display: block;
+    margin-bottom: 4px; }
+    @media (max-width: 767px) {
+      .uk-modal label {
+        font-size: 16px; } }
+  .uk-modal input {
+    font-size: 24px;
+    border: 2px solid #666666;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 93%; }
+    @media (max-width: 767px) {
+      .uk-modal input {
+        font-size: 16px; } }
+  .uk-modal input[type=submit],
+  .uk-modal button {
+    border: 2px solid #666666;
+    display: block;
+    margin: 0 auto;
+    width: auto; }
+  .uk-modal .confirm-msg {
+    display: none;
+    font-size: 20px; }
+    .uk-modal .confirm-msg i {
+      margin-bottom: 15px; }
+
+/* КОНЕЦ modal */
+/* НАЧАЛО заголовок */
+.brand-head {
+  background: #666666;
+  margin-top: 0;
+  margin-bottom: 0; }
+  .brand-head h2 {
+    color: white;
+    font-family: "Champagne$Limousines", Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 30px 35px 25px;
+    margin-top: 0;
+    margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .brand-head h2 {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px 25px 5px; } }
+
+/* КОНЕЦ заголовок */
+/* НАЧАЛО navbar */
+nav.uk-navbar {
+  background: rgba(0, 0, 0, 0.65); }
+
+.uk-navbar-brand {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px; }
+  @media (max-width: 767px) {
+    .uk-navbar-brand {
+      font-size: 24px; } }
+
+.uk-navbar-content,
+.uk-navbar-toggle {
+  height: 65px;
+  color: white; }
+  @media (max-width: 767px) {
+    .uk-navbar-content,
+    .uk-navbar-toggle {
+      height: 40px; } }
+
+.uk-navbar-nav > li > a {
+  color: white;
+  font-size: 18px;
+  line-height: 65px;
+  height: 65px; }
+
+.uk-navbar-brand:focus,
+.uk-navbar-brand:hover,
+.uk-navbar-nav > li.uk-open > a,
+.uk-navbar-nav > li:hover > a,
+.uk-navbar-nav > li > a:focus {
+  color: white; }
+
+.uk-navbar-nav > li.uk-open > a,
+.uk-navbar-nav > li:hover > a,
+.uk-navbar-nav > li > a:focus {
+  background-color: rgba(13, 13, 13, 0.7); }
+
+#my-id::selection {
+  background: rgba(13, 13, 13, 0.7); }
+
+/* КОНЕЦ navbar */
+/* НАЧАЛО main-section */
+.main-section {
+  background: 50% 50%/auto 100% url(../img/main-image.jpg) no-repeat;
+  text-align: center;
+  padding: 12% 0 4%;
+  margin-top: -85px; }
+  @media (max-width: 767px) {
+    .main-section {
+      padding: 0; } }
+  .main-section .text-section {
+    color: white;
+    font-family: "Champagne$Limousines", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    border: white 5px solid;
+    max-width: 500px;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative; }
+    @media (max-width: 767px) {
+      .main-section .text-section {
+        font-size: 24px;
+        border: none;
+        padding: 100px 0 0; } }
+  .main-section .outer-border {
+    background: 0 0/100% 100% url(../img/white-decoration-border.png) no-repeat;
+    position: absolute;
+    left: -45px;
+    right: -45px;
+    top: -45px;
+    bottom: -45px; }
+
+/* КОНЕЦ main-section*/
+/* НАЧАЛО summary-section */
+.we-care-about .text-section {
+  text-indent: 30px;
+  text-align: justify;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+/* КОНЕЦ summary-section */
+/* НАЧАЛО services */
+.services {
+  line-height: 1;
+  font-family: "Champagne$Limousines", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center; }
+  .services .uk-grid > div:nth-child(1) {
+    order: 1; }
+  .services .uk-grid > div:nth-child(2) {
+    order: 4; }
+  .services .uk-grid > div:nth-child(3) {
+    order: 3; }
+  .services .uk-grid > div:nth-child(4) {
+    order: 6; }
+  .services .uk-grid > div:nth-child(5) {
+    order: 5; }
+  .services .uk-grid > div:nth-child(6) {
+    order: 2; }
+  @media (max-width: 767px) {
+    .services .uk-grid > div:nth-child(2) {
+      order: 1; }
+    .services .uk-grid > div:nth-child(1) {
+      order: 2; }
+    .services .uk-grid > div:nth-child(6) {
+      order: 3; }
+    .services .uk-grid > div:nth-child(5) {
+      order: 4; }
+    .services .uk-grid > div:nth-child(4) {
+      order: 5; }
+    .services .uk-grid > div:nth-child(3) {
+      order: 6; } }
+  .services .text-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .services .text-section {
+        font-size: 24px;
+        padding: 15px; } }
+
+/* КОНЕЦ services */
+/* НАЧАЛО promotions */
+.promotions {
+  background: 50% 50%/cover url(../img/promotions_pass-key.jpg) content-box no-repeat; }
+  .promotions .text-section-wrapper {
+    padding: 2% 8%; }
+    @media (max-width: 767px) {
+      .promotions .text-section-wrapper {
+        padding: 0; } }
+  .promotions .text-section {
+    color: white;
+    font-family: "Champagne$Limousines", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.64);
+    padding: 15px; }
+    @media (max-width: 767px) {
+      .promotions .text-section {
+        font-size: 24px; } }
+    .promotions .text-section span {
+      font-size: 72px; }
+      @media (max-width: 767px) {
+        .promotions .text-section span {
+          font-size: 48px; } }
+
+/* КОНЕЦ promotions */
+/* НАЧАЛО reviews */
+.reviews {
+  padding: 3% 0; }
+  @media (max-width: 767px) {
+    .reviews {
+      padding: 3%; } }
+  .reviews .sliderbar-wrapper {
+    padding: 0 5%; }
+    @media (max-width: 767px) {
+      .reviews .sliderbar-wrapper {
+        padding: 0; } }
+  .reviews ul.uk-slider li {
+    text-align: center;
+    background: #b3b3b3;
+    background-clip: content-box;
+    min-height: 100%; }
+    .reviews ul.uk-slider li .review-item {
+      padding: 20px 20px 0; }
+      .reviews ul.uk-slider li .review-item img {
+        border: #666666 2px solid;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        width: 140px; }
+        @media (max-width: 767px) {
+          .reviews ul.uk-slider li .review-item img {
+            width: 100px; } }
+      .reviews ul.uk-slider li .review-item .name {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center; }
+        .reviews ul.uk-slider li .review-item .name p {
+          flex: 1 1 auto; }
+        .reviews ul.uk-slider li .review-item .name figure {
+          margin-top: 15px;
+          height: 2px;
+          display: block;
+          background: #666;
+          flex: 3 1 auto; }
+      .reviews ul.uk-slider li .review-item > p {
+        margin-top: 0; }
+  .reviews .uk-slidenav-position .uk-slidenav {
+    display: block;
+    font-weight: bold; }
+  .reviews .uk-slidenav-position .uk-slidenav-previous {
+    left: -65px; }
+    @media (max-width: 767px) {
+      .reviews .uk-slidenav-position .uk-slidenav-previous {
+        left: 0;
+        opacity: .6; } }
+  .reviews .uk-slidenav-position .uk-slidenav-next {
+    right: -65px; }
+    @media (max-width: 767px) {
+      .reviews .uk-slidenav-position .uk-slidenav-next {
+        right: 0;
+        opacity: .6; } }
+
+/* НАЧАЛО footer */
+footer {
+  color: white;
+  line-height: 1.4;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #666666;
+  padding: 2% 8%; }
+  @media (max-width: 767px) {
+    footer {
+      padding: 20px 15px 20px; } }
+  @media (max-width: 480px) {
+    footer {
+      text-align: center; } }
+  footer h3 {
+    color: white;
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px; }
+  footer .phone-numbers {
+    padding-left: 10px;
+    position: relative; }
+    @media (max-width: 480px) {
+      footer .phone-numbers {
+        padding-left: 0; } }
+    footer .phone-numbers::before {
+      content: url(../img/icon-mobile.png);
+      position: absolute;
+      left: 0;
+      top: 28px; }
+      @media (max-width: 480px) {
+        footer .phone-numbers::before {
+          display: none; } }
+  footer br + a {
+    margin-left: 20px; }
+    @media (max-width: 480px) {
+      footer br + a {
+        margin-left: 0; } }
+
+/* КОНЕЦ footer */
+
+/*# sourceMappingURL=styles.css.map */

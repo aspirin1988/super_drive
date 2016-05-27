@@ -139,9 +139,15 @@
 <script src="https://callback.blink.kz/resources/callback/js/mailer.js"></script>
 <script>
 	var submitSMG = new BMModule();
-	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); }, function(error) {});
+	submitSMG.submitForm(function(success) {
+		event.preventDefault();
+		form.style.display = "none";
+		confirmMsg.style.display = "block"; }, function(error) {});
 </script>
 <script>
+	var form = ukModalDialog.getElementsByTagName("form")[0],
+		btnPurchase = document.getElementById("btnPurchase"),// кнопка заказа услуги
+		confirmMsg = document.getElementById("confirmMsg"); //блок подтвержденя отправки
 	$('.container.before-after a').click(function(){
 		var src = $(this).find('img').attr('src');
 		$('#beforeAndAfterGallery img').attr('src',src);

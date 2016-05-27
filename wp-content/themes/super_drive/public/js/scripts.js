@@ -7,9 +7,9 @@ var ukModalDialog = document.getElementsByClassName("uk-modal-dialog")[0], //м�
 //по нажатии на submit в форме, скрыть форму
 // и показать подтверждение
 btnPurchase.addEventListener('click', function (event) {
-  event.preventDefault();
+  /*event.preventDefault();
   form.style.display = "none";
-  confirmMsg.style.display = "block";
+  confirmMsg.style.display = "block";*/
 });
 
 //модалка Uikit'a:
@@ -53,11 +53,6 @@ $('#modalPurchase').on({
 //   });
 // });
 
-$('.uk-navbar-toggle.uk-visible-small').click(function () {
-  $('.btn_'+current).addClass('uk-active-li');
-  console.info(current);
-});
-
 var current='' ;
 window.onscroll=function () {
   var target = [
@@ -67,15 +62,12 @@ window.onscroll=function () {
     "promotions",
     "reviews",
     "footer"];
-  console.info(window.window.pageYOffset);
+  //console.info(window.window.pageYOffset);
 
   $.each(target,function (key,obj) {
-    //console.info(window.window.pageYOffset+' '+$('#'+obj).offset()['top']);
-    //console.info(window.window.pageYOffset+' '+($('#'+obj).offset()['top']+$('#'+obj).height()));
-    if ((window.window.pageYOffset+50>=$('#'+obj).offset()['top'])&&(window.window.pageYOffset+50<=$('#'+obj).offset()['top']+$('#'+obj).height()))
+    var object=$('#'+obj);
+    if ((window.window.pageYOffset+50>=object.offset()['top'])&&(window.window.pageYOffset+50<=object.offset()['top']+object.height()))
     {
-      //console.info(window.window.pageYOffset+' > '+$('#'+obj).offset()['top']+' '+($('#'+obj).offset()['top']+$('#'+obj).height()));
-      // $('.'+obj).addClass('active');
       current=obj;
       $('.btn_'+obj).addClass('uk-active-li');
     }

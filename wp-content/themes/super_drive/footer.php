@@ -41,5 +41,8 @@
 	var submitSMG = new BMModule();
 	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); }, function(error) {});
 </script>
+<?=get_field('google')?>
+<?=get_field('yandex')?>
+<?php wp_footer() ?>
 </body>
 </html>

@@ -36,7 +36,7 @@
 	</div>
 	<div class="uk-container uk-container-center services">
 		<div class="uk-grid uk-grid-collapse">
-			<?php $posts=get_posts(array('category_name'=>'services','orderby'=>'id','order'=>'ASC'));
+			<?php $posts=get_posts(array('category_name'=>'services','orderby'=>'id','order'=>'ASC', 'numberposts'=>3 ));
 			foreach ($posts as $value):
 			?>
 			<div class="uk-width-medium-1-3">

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5448b8cb-e581-4003-875c-38b772be6510" name="superdriver" url="http://195.210.46.21">
+        <fileTransfer host="195.210.46.21" port="21" password="df99dfe8dfc1dfc1df9fdfd8df9adf9cdfe0dfd9" username="superdri">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

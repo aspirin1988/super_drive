@@ -31,8 +31,7 @@ define('DB_PASSWORD', 'v4Hj7#0o');
 
 /** MySQL hostname */
 define('DB_HOST', 'srv-db-plesk07.ps.kz:3306');
-//login :super_admin
-//password : L^SE41Z6S#*ljJ%aNx*B)1PI
+
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
